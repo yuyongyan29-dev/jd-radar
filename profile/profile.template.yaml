@@ -9,6 +9,7 @@ meta:
 quickstart:
   target_roles: []        # 目标方向,按优先级,如 ["AI 产品经理", "数据产品经理"]
   city: ""                # 城市
+  home_area: ""           # 可选:居住片区(如"西湖区");不填则通勤维度计为未知
   commute_max_min: 60     # 单程通勤上限(分钟)
   salary_floor_takehome: 0   # 到手月薪底线(低于免谈)
   redlines_top2: []       # 两条最重要的红线,如 ["单休", "外包驻场"]
