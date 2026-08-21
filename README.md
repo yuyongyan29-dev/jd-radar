@@ -23,7 +23,7 @@
 前提:任意 agent CLI(Claude Code / Codex / Cursor / OpenCode)。
 
 ```bash
-git clone https://github.com/<you>/jd-radar.git
+git clone https://github.com/yuyongyan29-dev/jd-radar.git
 cd jd-radar
 claude   # 或 codex / cursor / opencode
 ```
