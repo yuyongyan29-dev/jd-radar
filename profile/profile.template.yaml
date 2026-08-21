@@ -1,0 +1,67 @@
+# 复制为 profile/profile.yaml 后由 /setup 或 /quickstart 填写。
+# profile.yaml 已被 .gitignore 覆盖——含真实信息的档案永远不要提交/公开。
+
+meta:
+  created: ""            # 建档日期
+  mode: quickstart        # quickstart | full
+
+# ===== /quickstart 只需以下 4 项 =====
+quickstart:
+  target_roles: []        # 目标方向,按优先级,如 ["AI 产品经理", "数据产品经理"]
+  city: ""                # 城市
+  commute_max_min: 60     # 单程通勤上限(分钟)
+  salary_floor_takehome: 0   # 到手月薪底线(低于免谈)
+  redlines_top2: []       # 两条最重要的红线,如 ["单休", "外包驻场"]
+
+# ===== /setup 第 0 幕:简历自动提取(agent 填写,用户确认)=====
+resume:
+  education: []           # [{school, degree, major, year}]
+  experiences: []         # [{company, title, start, end, summary}]
+  skills: []
+  years_total: 0
+
+# ===== /setup 第 1 幕:必答 8 题 =====
+core:
+  status: ""              # 在职看机会 | 离职从容 | 离职急找 | 应届
+  target_roles: []        # 同 quickstart,可细化
+  cities: []              # 接受城市(多选);是否接受搬家
+  relocate_ok: false
+  commute_max_min: 60
+  salary:                 # 到手口径;agent 负责换算税前
+    ideal: 0
+    satisfied: 0
+    floor: 0
+    months_sensitivity: false   # 13 薪以下结构是否在意
+  work_schedule:          # 工时红线
+    minimum: ""           # 必须双休标准工时 | 双休可偶尔加班 | 可大小周 | 单休也行
+    latest_off: 20        # 晚于几点下班算踩线(19/20/21/22)
+  redlines: []            # 多选:外包派遣/驻场/纯销售/夜班倒班/出差>30%/异地入职培训/期权抵现金/试用期不缴社保
+  company_pref:
+    ranking: []           # 外企/大厂/中厂/初创/国企,可空
+    blacklist: []         # 点名不投的公司/行业
+  freeform: ""            # 兜底:看到就 pass 的 / 特别加分的(agent 归类进 redlines/bonus)
+
+# ===== /setup 第 2 幕:选答(全部可空)=====
+optional:
+  role_type: ""           # 管理岗 | 专业岗 | 均可
+  team_size_pref: ""
+  social_insurance_strict: false   # 是否要求全额基数
+  onboard_date: ""
+  soe_module:             # 仅当 company_pref 含国企才问
+    political_status: ""
+    hukou_need: ""
+  bonus: []               # 加分项:远程混合/弹性打卡/理想行业等
+  wechat: ""              # /tailor 用,平时不问
+  photo_path: ""
+
+# ===== 权重(可调,默认见 docs/scoring.md)=====
+weights:
+  direction: 0.25
+  skills: 0.25
+  seniority: 0.15
+  salary: 0.15
+  schedule: 0.10
+  commute: 0.10
+
+# ===== 经历素材库(/tailor 懒加载深挖,STAR+数据)=====
+story_bank: []            # [{project, role, actions, result_quantified, evidence}]
