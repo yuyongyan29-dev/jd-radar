@@ -6,6 +6,11 @@
 
 > **jd-radar** — A local-first job-decision agent for the Chinese job market, running inside your own AI coding CLI (Claude Code / Codex / Cursor / OpenCode). Evaluate JDs with evidence-backed decision cards, detect China-specific scam patterns (培训贷 / 外包壳 / 虚假双休), and converge scores as you chat with HR. Analysis only — it never auto-applies.
 
+<p align="center">
+  <img src="docs/assets/decision-card.png" alt="jd-radar 三层决策卡:安全层 / 判断层 / 行动层" width="720">
+</p>
+<p align="center"><sub>一次真实的 /quickstart 输出(基于公开岗位页,画像为示例;渲染图,内容未改动)</sub></p>
+
 ## 它做什么
 
 - **三层决策卡**:🛡 安全层(培训贷/收费/扣证件/签约主体不一致等硬风险,附命中原文与求助路径)→ 🧭 判断层(资格、偏好、最大未知项)→ 🎯 行动层(下一步 + 一条追问话术 + 开场白草稿)
