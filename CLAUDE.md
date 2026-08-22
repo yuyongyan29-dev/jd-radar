@@ -4,6 +4,6 @@
 
 Claude Code 补充说明:
 
-- 用户输入 `/quickstart` `/setup` `/eval` `/compare` `/update` 时,按 AGENTS.md 中对应命令的流程执行(这些是本项目的对话约定,不是已注册的斜杠命令;用户直接用自然语言说"帮我分析这个 JD"时同样进入 /eval 流程)。
+- `/quickstart` `/setup` `/eval` `/compare` `/update` 已注册为项目级斜杠命令(.claude/commands/),可直接使用;用户不带斜杠输入 `quickstart`,或用自然语言说"帮我分析这个 JD"时,同样按 AGENTS.md 对应命令的流程执行。
 - 截图输入直接用视觉能力读取,不需要 OCR 工具。
 - 分析流程只读:除 `profile/profile.yaml` 与 `reports/` 目录外,不写任何文件;不执行 shell 命令。
