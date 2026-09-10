@@ -1,18 +1,10 @@
 ---
-name: "source-command-setup"
-description: "完整建档:简历自动提取 + 必答 8 题 + 选答模块"
+name: source-command-setup
+description: 当用户要求 setup、初始化求职档案或完整建档时使用。
 ---
 
-# source-command-setup
+# 求职档案初始化
 
-Use this skill when the user asks to run the migrated source command `setup`.
+执行项目根 `AGENTS.md` 的 `/setup` 契约，字段以 `profile/profile.template.yaml` 为准。只询问尚缺的信息，保留必答/可跳过的产品定义；经历素材库按 `/tailor` 的任务需要再展开。
 
-## Command Template
-
-执行 AGENTS.md 中定义的 /setup 流程,按 profile/profile.template.yaml 的结构建档:
-
-- 第 0 幕:请用户粘贴简历 → 提取教育/经历/技能 → 复述确认。简历里已有的信息绝不再问。
-- 第 1 幕:必答 8 题(求职状态/目标方向/城市通勤/薪资三档/工时红线/绝对红线多选/公司偏好与黑名单/开放兜底题)。
-- 第 2 幕:全部可跳过(管理岗倾向、团队规模、社保敏感度、到岗时间、国企模块——仅当偏好含国企才问、加分项)。
-- 写入 profile/profile.yaml(本地,已 gitignore),并提醒用户该文件不会也不应提交。
-- 经历素材库不在此深挖(留给 /tailor 懒加载)。
+完成后保存 `profile/profile.yaml` 并说明该文件属于本地隐私档案、不得提交。不要在此复制建档题目或另设一轮确认。
