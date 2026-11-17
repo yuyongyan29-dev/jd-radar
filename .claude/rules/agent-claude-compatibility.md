@@ -1,0 +1,1 @@
+../../docs/agents/claude-compatibility.md
